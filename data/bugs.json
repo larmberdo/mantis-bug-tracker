@@ -43,7 +43,7 @@
     {
       "id": "0000213",
       "title": "ECMS - Device Control - No \"In Progress\" image for VBIS",
-      "status": "completed",
+      "status": "fixed-pending-verification",
       "assignee": "前端处理",
       "date": "2025-06-12",
       "description": "设备管理，设备控制弹窗中VBIS图标没有in Progress状态图标",
@@ -64,7 +64,7 @@
     {
       "id": "0000189",
       "title": "Recount function without RO, and auto authorized successful",
-      "status": "completed",
+      "status": "fixed-pending-verification",
       "assignee": "前端处理",
       "date": "2024-06-11",
       "description": "Device Management -> Click icon (right upper) -> Recount\nlogin user has Device Management with recount access only, without RO access.\nBut the authorized successful automatically, and without insert RO U",
@@ -74,7 +74,7 @@
     {
       "id": "0000188",
       "title": "Wording issue for \"severs\", it should be servers",
-      "status": "completed",
+      "status": "fixed-pending-verification",
       "assignee": "前端处理",
       "date": "2024-06-11",
       "description": "Initialisation popup window:\n• 错误: Please confirm to execute data initialisation for all devices and severs\n• 正确: Please confirm to execute data initialisation for all devices and servers",
@@ -84,7 +84,7 @@
     {
       "id": "0000207",
       "title": "ECMS: Server error when Consolidation",
-      "status": "completed",
+      "status": "fixed-pending-verification",
       "assignee": "后端处理",
       "date": "2024-06-11",
       "description": "Server error when select all subsectors to consolidate.",
@@ -127,7 +127,7 @@
     {
       "id": "0000205",
       "title": "ECMS: Batch data can't be shown after switch",
-      "status": "completed",
+      "status": "fixed-pending-verification",
       "assignee": "前端处理",
       "date": "2024-06-10",
       "description": "Batch data can't be shown after switch between \"All\" and \"Device number\" in \"Device no.\" under \"Enquire Batch in VBIS\"",
@@ -137,7 +137,7 @@
     {
       "id": "0000203",
       "title": "ECMS - Close Counting - wording issue in Confirm message",
-      "status": "completed",
+      "status": "fixed-pending-verification",
       "assignee": "前端处理",
       "date": "2024-06-10",
       "description": "• 错误: ... These devices may not be able to start counting....\n• 正确: ... These devices may not be able to Close counting....",
@@ -163,6 +163,12 @@
       "description": "问题已修复并验证",
       "color": "success"
     },
+    "fixed-pending-verification": {
+      "label": "已修复，待验证",
+      "emoji": "🟡",
+      "description": "问题已修复，等待验证确认",
+      "color": "warning"
+    },
     "pending": {
       "label": "未完成",
       "emoji": "🔴",
@@ -171,13 +177,13 @@
     },
     "transfer": {
       "label": "需要转移",
-      "emoji": "🟡",
+      "emoji": "🟠",
       "description": "需要其他团队/人员处理",
       "color": "warning"
     },
     "not-bug": {
       "label": "非Bug",
-      "emoji": "🟠",
+      "emoji": "🟣",
       "description": "不是实际问题，待退回",
       "color": "warning"
     },

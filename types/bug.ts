@@ -1,7 +1,7 @@
 export interface Bug {
   id: string;
   title: string;
-  status: 'completed' | 'pending' | 'transfer' | 'not-bug' | 'not-reproduced';
+  status: 'completed' | 'pending' | 'transfer' | 'not-bug' | 'not-reproduced' | 'fixed-pending-verification';
   assignee: string;
   date: string;
   description: string;

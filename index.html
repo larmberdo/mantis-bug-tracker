@@ -45,9 +45,11 @@
             margin: 5px 0;
         }
         .completed { background-color: #d4edda; color: #155724; }
+        .fixed-pending-verification { background-color: #fff3cd; color: #856404; }
         .pending { background-color: #f8d7da; color: #721c24; }
-        .transfer { background-color: #fff3cd; color: #856404; }
-        .not-bug { background-color: #ffeaa7; color: #6c5ce7; }
+        .transfer { background-color: #ffcc99; color: #8B4513; }
+        .not-bug { background-color: #e6ccff; color: #6a0d83; }
+        .not-reproduced { background-color: #cce5ff; color: #0066cc; }
         .bug-item {
             background: #f8f9fa;
             border: 1px solid #e9ecef;
@@ -118,6 +120,90 @@
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
+        .filter-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #e9ecef;
+        }
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .filter-group label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .filter-group select, .filter-group input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .stats-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 15px 10px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -128,10 +214,59 @@
             <h2>📊 状态说明</h2>
             <ul>
                 <li class="status completed">🟢 已完成: 问题已修复并验证</li>
+                <li class="status fixed-pending-verification">🟡 已修复，待验证: 问题已修复，等待验证确认</li>
                 <li class="status pending">🔴 未完成: 问题待处理</li>
-                <li class="status transfer">🟡 需要转移: 需要其他团队/人员处理</li>
-                <li class="status not-bug">🟠 非Bug: 不是实际问题，待退回</li>
+                <li class="status transfer">🟠 需要转移: 需要其他团队/人员处理</li>
+                <li class="status not-bug">🟣 非Bug: 不是实际问题，待退回</li>
+                <li class="status not-reproduced">🔵 未复现: 问题无法复现，需要更多信息</li>
             </ul>
+        </div>
+
+        <!-- 统计信息 -->
+        <div class="stats-section">
+            <h3 style="margin-top: 0; color: #2c3e50;">📊 统计概览</h3>
+            <div class="stats-grid" id="statsGrid">
+                <!-- 统计项将通过JavaScript动态生成 -->
+            </div>
+            <div style="text-align: center; margin-top: 15px;">
+                <span style="font-size: 16px; font-weight: bold; color: #2c3e50;" id="totalCount">
+                    显示 0 / 0 个Bug
+                </span>
+            </div>
+        </div>
+
+        <!-- 筛选功能 -->
+        <div class="filter-section">
+            <h3 style="margin-top: 0; color: #2c3e50;">🔍 筛选功能</h3>
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label>状态筛选</label>
+                    <select id="statusFilter" multiple size="6">
+                        <option value="completed">🟢 已完成</option>
+                        <option value="fixed-pending-verification">🟡 已修复，待验证</option>
+                        <option value="pending">🔴 未完成</option>
+                        <option value="transfer">🟠 需要转移</option>
+                        <option value="not-bug">🟣 非Bug</option>
+                        <option value="not-reproduced">🔵 未复现</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>选择日期</label>
+                    <select id="dateFilter">
+                        <option value="">所有日期</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>处理人员</label>
+                    <select id="assigneeFilter">
+                        <option value="">所有人员</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-buttons">
+                <button class="btn btn-primary" onclick="applyFilters()">应用筛选</button>
+                <button class="btn btn-secondary" onclick="resetFilters()">重置筛选</button>
+            </div>
         </div>
 
         <div class="date-section">
@@ -313,16 +448,267 @@
     </div>
 
     <script>
-        // 显示最后更新时间
-        document.getElementById('lastUpdated').textContent = new Date().toLocaleString('zh-CN');
-        
-        // 添加一些交互功能
-        document.querySelectorAll('.bug-item').forEach(item => {
-            item.addEventListener('click', function() {
-                this.style.transform = this.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
-                this.style.transition = 'transform 0.2s ease';
-            });
+        // Bug数据和状态配置
+        const statusConfig = {
+            'completed': { label: '已完成', emoji: '🟢', description: '问题已修复并验证' },
+            'fixed-pending-verification': { label: '已修复，待验证', emoji: '🟡', description: '问题已修复，等待验证确认' },
+            'pending': { label: '未完成', emoji: '🔴', description: '问题待处理' },
+            'transfer': { label: '需要转移', emoji: '🟠', description: '需要其他团队/人员处理' },
+            'not-bug': { label: '非Bug', emoji: '🟣', description: '不是实际问题，待退回' },
+            'not-reproduced': { label: '未复现', emoji: '🔵', description: '问题无法复现，需要更多信息' }
+        };
+
+        let allBugs = [];
+        let filteredBugs = [];
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 显示最后更新时间
+            document.getElementById('lastUpdated').textContent = new Date().toLocaleString('zh-CN');
+            
+            // 初始化Bug数据
+            initializeBugData();
+            
+            // 初始化处理人员下拉列表
+            initializeAssigneeFilter();
+            
+            // 更新统计信息
+            updateStats();
+            
+            // 添加交互功能
+            addInteractiveBehavior();
         });
+
+        // 从DOM中提取Bug数据
+        function initializeBugData() {
+            const bugItems = document.querySelectorAll('.bug-item');
+            allBugs = [];
+            
+            bugItems.forEach(item => {
+                const bug = extractBugFromDom(item);
+                if (bug) {
+                    allBugs.push(bug);
+                }
+            });
+            
+            filteredBugs = [...allBugs];
+            
+            // 初始化日期筛选器
+            initializeDateFilter();
+        }
+
+        // 初始化日期筛选器
+        function initializeDateFilter() {
+            const dateFilter = document.getElementById('dateFilter');
+            const uniqueDates = [...new Set(allBugs.map(bug => bug.date).filter(Boolean))];
+            
+            // 按日期排序（最新的在前）
+            uniqueDates.sort((a, b) => new Date(b) - new Date(a));
+            
+            uniqueDates.forEach(date => {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = formatDateForDisplay(date);
+                dateFilter.appendChild(option);
+            });
+        }
+
+        // 格式化日期显示
+        function formatDateForDisplay(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('zh-CN', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // 从DOM元素中提取Bug信息
+        function extractBugFromDom(element) {
+            const idElement = element.querySelector('.bug-id');
+            const statusElement = element.querySelector('.status');
+            const assigneeElement = element.querySelector('strong');
+            
+            if (!idElement || !statusElement) return null;
+            
+            const idText = idElement.textContent;
+            const idMatch = idText.match(/🆔\s*(\d+):\s*(.+)/);
+            
+            if (!idMatch) return null;
+            
+            // 从状态元素的class中提取状态
+            let status = 'pending';
+            statusElement.classList.forEach(cls => {
+                if (cls.startsWith('status') && cls !== 'status') {
+                    status = cls.replace('status ', '').trim();
+                }
+            });
+            
+            // 提取处理人员
+            let assignee = '';
+            if (assigneeElement && assigneeElement.textContent.includes('处理人员:')) {
+                const assigneeText = assigneeElement.parentNode.textContent;
+                const assigneeMatch = assigneeText.match(/处理人员:\s*([^\n]+)/);
+                assignee = assigneeMatch ? assigneeMatch[1].trim() : '';
+            }
+            
+            // 从父级日期section中提取日期
+            let date = '';
+            const dateSection = element.closest('.date-section');
+            if (dateSection) {
+                const dateHeader = dateSection.querySelector('h2');
+                if (dateHeader) {
+                    const dateText = dateHeader.textContent;
+                    const dateMatch = dateText.match(/📅\s*(\d+月\d+日)/);
+                    if (dateMatch) {
+                        // 转换为标准日期格式
+                        const monthDay = dateMatch[1];
+                        const monthMatch = monthDay.match(/(\d+)月(\d+)日/);
+                        if (monthMatch) {
+                            const month = monthMatch[1].padStart(2, '0');
+                            const day = monthMatch[2].padStart(2, '0');
+                            date = `2024-${month}-${day}`;
+                        }
+                    }
+                }
+            }
+            
+            return {
+                id: idMatch[1],
+                title: idMatch[2],
+                status: status,
+                assignee: assignee,
+                date: date,
+                element: element
+            };
+        }
+
+        // 初始化处理人员筛选器
+        function initializeAssigneeFilter() {
+            const assigneeFilter = document.getElementById('assigneeFilter');
+            const uniqueAssignees = [...new Set(allBugs.map(bug => bug.assignee).filter(Boolean))];
+            
+            uniqueAssignees.forEach(assignee => {
+                const option = document.createElement('option');
+                option.value = assignee;
+                option.textContent = assignee;
+                assigneeFilter.appendChild(option);
+            });
+        }
+
+        // 更新统计信息
+        function updateStats() {
+            const statsGrid = document.getElementById('statsGrid');
+            const totalCount = document.getElementById('totalCount');
+            
+            // 清空统计网格
+            statsGrid.innerHTML = '';
+            
+            // 计算各状态的数量
+            const stats = {};
+            Object.keys(statusConfig).forEach(status => {
+                stats[status] = filteredBugs.filter(bug => bug.status === status).length;
+            });
+            
+            // 生成统计项
+            Object.entries(stats).forEach(([status, count]) => {
+                const statItem = document.createElement('div');
+                statItem.className = 'stat-item';
+                statItem.innerHTML = `
+                    <div class="stat-number">${count}</div>
+                    <div class="stat-label">${statusConfig[status].emoji} ${statusConfig[status].label}</div>
+                `;
+                statsGrid.appendChild(statItem);
+            });
+            
+            // 更新总计数
+            totalCount.textContent = `显示 ${filteredBugs.length} / ${allBugs.length} 个Bug`;
+        }
+
+        // 应用筛选
+        function applyFilters() {
+            const statusFilter = document.getElementById('statusFilter');
+            const dateFilter = document.getElementById('dateFilter').value;
+            const assigneeFilter = document.getElementById('assigneeFilter').value;
+            
+            // 获取选中的状态
+            const selectedStatuses = Array.from(statusFilter.selectedOptions).map(option => option.value);
+            
+            // 筛选Bug
+            filteredBugs = allBugs.filter(bug => {
+                // 状态筛选
+                if (selectedStatuses.length > 0 && !selectedStatuses.includes(bug.status)) {
+                    return false;
+                }
+                
+                // 日期筛选 - 精确匹配选中的日期
+                if (dateFilter && bug.date !== dateFilter) {
+                    return false;
+                }
+                
+                // 处理人员筛选
+                if (assigneeFilter && bug.assignee !== assigneeFilter) {
+                    return false;
+                }
+                
+                return true;
+            });
+            
+            // 更新显示
+            updateBugDisplay();
+            updateStats();
+        }
+
+        // 重置筛选
+        function resetFilters() {
+            document.getElementById('statusFilter').selectedIndex = -1;
+            document.getElementById('dateFilter').value = '';
+            document.getElementById('assigneeFilter').value = '';
+            
+            filteredBugs = [...allBugs];
+            updateBugDisplay();
+            updateStats();
+        }
+
+        // 更新Bug显示
+        function updateBugDisplay() {
+            // 隐藏所有Bug项
+            allBugs.forEach(bug => {
+                bug.element.style.display = 'none';
+            });
+            
+            // 显示筛选后的Bug项
+            filteredBugs.forEach(bug => {
+                bug.element.style.display = 'block';
+            });
+            
+            // 处理日期分组的显示
+            const dateSections = document.querySelectorAll('.date-section');
+            dateSections.forEach(section => {
+                const visibleBugs = section.querySelectorAll('.bug-item:not([style*="display: none"])');
+                if (visibleBugs.length === 0) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                    // 更新日期标题中的Bug数量
+                    const header = section.querySelector('h2');
+                    if (header) {
+                        const originalText = header.textContent.replace(/\s*\(\d+\s*个Bug\)/, '');
+                        header.textContent = `${originalText} (${visibleBugs.length} 个Bug)`;
+                    }
+                }
+            });
+        }
+
+        // 添加交互行为
+        function addInteractiveBehavior() {
+            document.querySelectorAll('.bug-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    this.style.transform = this.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+            });
+        }
     </script>
 </body>
 </html> 

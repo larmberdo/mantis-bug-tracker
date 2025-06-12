@@ -4,7 +4,7 @@
 
 ## 🌐 在线访问
 
-访问地址：`https://你的用户名.github.io/mantis-bug-tracker`
+访问地址：`https://larmberdo.github.io/mantis-bug-tracker`
 
 ## 📋 功能特性
 

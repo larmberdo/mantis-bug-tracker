@@ -18,7 +18,7 @@ async function addBug() {
 
   const id = await question('Bug ID (例如: 0000211): ');
   const title = await question('Bug标题: ');
-  const status = await question('状态 (completed/pending/transfer/not-bug): ');
+  const status = await question('状态 (completed/pending/transfer/not-bug/not-reproduced): ');
   const assignee = await question('处理人员: ');
   const date = await question('日期 (YYYY-MM-DD, 默认今天): ') || new Date().toISOString().split('T')[0];
   const description = await question('问题描述: ');

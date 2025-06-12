@@ -95,6 +95,7 @@ npm run export
 - `pending` - 🔴 未完成：问题待处理
 - `transfer` - 🟡 需要转移：需要其他团队/人员处理
 - `not-bug` - 🟠 非Bug：不是实际问题，待退回
+- `not-reproduced` - 🔵 未复现：问题无法复现，需要更多信息
 
 ## 🔧 自定义
 

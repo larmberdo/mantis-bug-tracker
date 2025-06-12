@@ -1,7 +1,7 @@
 export interface Bug {
   id: string;
   title: string;
-  status: 'completed' | 'pending' | 'transfer' | 'not-bug';
+  status: 'completed' | 'pending' | 'transfer' | 'not-bug' | 'not-reproduced';
   assignee: string;
   date: string;
   description: string;
@@ -14,7 +14,7 @@ export interface StatusConfig {
   label: string;
   emoji: string;
   description: string;
-  color: 'success' | 'danger' | 'warning';
+  color: 'success' | 'danger' | 'warning' | 'info';
 }
 
 export interface BugData {

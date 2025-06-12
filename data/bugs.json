@@ -1,0 +1,135 @@
+{
+  "bugs": [
+    {
+      "id": "0000211",
+      "title": "测试Bug - 新的问题示例",
+      "status": "pending",
+      "assignee": "测试人员",
+      "date": "2024-06-12",
+      "description": "这是一个测试添加的Bug记录\n用于演示数据管理功能",
+      "steps": "1. 打开测试页面\n2. 点击测试按钮\n3. 观察错误现象",
+      "screenshotPath": "test/screenshots/0000211",
+      "note": "这是一个测试记录"
+    },
+    {
+      "id": "0000189",
+      "title": "Recount function without RO, and auto authorized successful",
+      "status": "completed",
+      "assignee": "前端处理",
+      "date": "2024-06-11",
+      "description": "Device Management -> Click icon (right upper) -> Recount\nlogin user has Device Management with recount access only, without RO access.\nBut the authorized successful automatically, and without insert RO U",
+      "steps": "Device Management -> Click icon (right upper) -> Recount",
+      "screenshotPath": ""
+    },
+    {
+      "id": "0000188",
+      "title": "Wording issue for \"severs\", it should be servers",
+      "status": "completed",
+      "assignee": "前端处理",
+      "date": "2024-06-11",
+      "description": "Initialisation popup window:\n• 错误: Please confirm to execute data initialisation for all devices and severs\n• 正确: Please confirm to execute data initialisation for all devices and servers",
+      "steps": "Device Management -> Click icon (right upper) -> Data Initialisation",
+      "screenshotPath": ""
+    },
+    {
+      "id": "0000207",
+      "title": "ECMS: Server error when Consolidation",
+      "status": "completed",
+      "assignee": "后端处理",
+      "date": "2024-06-11",
+      "description": "Server error when select all subsectors to consolidate.",
+      "steps": "1. Election Result Management > Votes Consolidation > Select All Subsectors\n2. Consolidate\n3. \"Server error\" appear",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000207"
+    },
+    {
+      "id": "0000208",
+      "title": "ECMS: Error message when export User Audit Trial Report",
+      "status": "not-bug",
+      "assignee": "后端处理",
+      "date": "2024-06-11",
+      "description": "User Audit Trial Report can't be exported and error message appear",
+      "steps": "1. System Management > Audit report management > User Audit Trial Report\n2. Export\n3. Error message appear",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000208",
+      "note": "未复现（怀疑网络问题）"
+    },
+    {
+      "id": "0000209",
+      "title": "ECMS: Incorrect report title and No \"Device no.\" data display",
+      "status": "transfer",
+      "assignee": "后端处理",
+      "date": "2024-06-11",
+      "description": "• Batch message report: No \"Device no.\" data display and report title is correct\n• Batch scanning summary report: No \"Device no.\" data display and report title is correct",
+      "steps": "1. System Management > Audit report management > Batch message report\n2. System Management > Audit report management > Batch scanning summary report",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000209",
+      "note": "需要转设备端(标题已改,数据设备端未报)"
+    },
+    {
+      "id": "0000210",
+      "title": "ECMS: Some data still display as English after language change",
+      "status": "not-bug",
+      "assignee": "后端处理",
+      "date": "2024-06-11",
+      "description": "The data of \"Module\" and Action name\" still display as English in User Audit Trial Report after change application language to Traditional Chinese",
+      "steps": "1. Change application language to Traditional Chinese\n2. System Management > Audit report management > User Audit Trial Report\n3. Some data still display in English",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000210",
+      "note": "不是bug，待退回(设备端已沟通只支持英文)"
+    },
+    {
+      "id": "0000205",
+      "title": "ECMS: Batch data can't be shown after switch",
+      "status": "completed",
+      "assignee": "前端处理",
+      "date": "2024-06-10",
+      "description": "Batch data can't be shown after switch between \"All\" and \"Device number\" in \"Device no.\" under \"Enquire Batch in VBIS\"",
+      "steps": "",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000205"
+    },
+    {
+      "id": "0000203",
+      "title": "ECMS - Close Counting - wording issue in Confirm message",
+      "status": "completed",
+      "assignee": "前端处理",
+      "date": "2024-06-10",
+      "description": "• 错误: ... These devices may not be able to start counting....\n• 正确: ... These devices may not be able to Close counting....",
+      "steps": "",
+      "screenshotPath": ""
+    },
+    {
+      "id": "0000186",
+      "title": "ECMS: No data import from HSS0.5 & VBIS when use offline data recovery",
+      "status": "transfer",
+      "assignee": "",
+      "date": "2024-06-10",
+      "description": "During import data, it will show 100% imported but there is no data display on related subsector in progress monitoring",
+      "steps": "",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000186",
+      "note": "需要转离线数据导入应用处理"
+    }
+  ],
+  "statusConfig": {
+    "completed": {
+      "label": "已完成",
+      "emoji": "🟢",
+      "description": "问题已修复并验证",
+      "color": "success"
+    },
+    "pending": {
+      "label": "未完成",
+      "emoji": "🔴",
+      "description": "问题待处理",
+      "color": "danger"
+    },
+    "transfer": {
+      "label": "需要转移",
+      "emoji": "🟡",
+      "description": "需要其他团队/人员处理",
+      "color": "warning"
+    },
+    "not-bug": {
+      "label": "非Bug",
+      "emoji": "🟠",
+      "description": "不是实际问题，待退回",
+      "color": "warning"
+    }
+  }
+}

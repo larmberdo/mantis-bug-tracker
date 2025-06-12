@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantis ECMS Bug 跟踪记录</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            padding: 10px 0;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .completed { background-color: #d4edda; color: #155724; }
+        .pending { background-color: #f8d7da; color: #721c24; }
+        .transfer { background-color: #fff3cd; color: #856404; }
+        .not-bug { background-color: #ffeaa7; color: #6c5ce7; }
+        .bug-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .bug-id {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .meta-info {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .description {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .steps {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .screenshot-path {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .date-section {
+            border-top: 2px solid #3498db;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+        .legend {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .legend h2 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+        }
+        .legend ul {
+            list-style: none;
+            padding: 0;
+        }
+        .legend li {
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐛 Mantis ECMS Bug 跟踪记录</h1>
+        
+        <div class="legend">
+            <h2>📊 状态说明</h2>
+            <ul>
+                <li class="status completed">🟢 已完成: 问题已修复并验证</li>
+                <li class="status pending">🔴 未完成: 问题待处理</li>
+                <li class="status transfer">🟡 需要转移: 需要其他团队/人员处理</li>
+                <li class="status not-bug">🟠 非Bug: 不是实际问题，待退回</li>
+            </ul>
+        </div>
+
+        <div class="date-section">
+            <h2>📅 6月11日</h2>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000189: Recount function without RO, and auto authorized successful</div>
+                <div class="meta-info">
+                    <span class="status completed">🟢 状态: 已完成</span><br>
+                    <strong>👤 处理人员:</strong> 前端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    Device Management -> Click icon (right upper) -> Recount<br>
+                    login user has Device Management with recount access only, without RO access.<br>
+                    But the authorized successful automatically, and without insert RO U
+                </div>
+                <div class="steps">
+                    <strong>🔄 复现步骤:</strong><br>
+                    Device Management -> Click icon (right upper) -> Recount
+                </div>
+            </div>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000188: Wording issue for "severs", it should be servers</div>
+                <div class="meta-info">
+                    <span class="status completed">🟢 状态: 已完成</span><br>
+                    <strong>👤 处理人员:</strong> 前端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    Initialisation popup window:<br>
+                    • 错误: Please confirm to execute data initialisation for all devices and severs<br>
+                    • 正确: Please confirm to execute data initialisation for all devices and servers
+                </div>
+                <div class="steps">
+                    <strong>🔄 复现步骤:</strong><br>
+                    Device Management -> Click icon (right upper) -> Data Initialisation
+                </div>
+            </div>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000207: ECMS: Server error when Consolidation</div>
+                <div class="meta-info">
+                    <span class="status completed">🟢 状态: 已完成</span><br>
+                    <strong>👤 处理人员:</strong> 后端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    Server error when select all subsectors to consolidate.
+                </div>
+                <div class="steps">
+                    <strong>🔄 复现步骤:</strong><br>
+                    1. Election Result Management > Votes Consolidation > Select All Subsectors<br>
+                    2. Consolidate<br>
+                    3. "Server error" appear
+                </div>
+                <div class="screenshot-path">
+                    <strong>📸 截图路径:</strong> "192.168.100.158\TestFolder\Wesoft Bug to Mantis\Peter\0000207"
+                </div>
+            </div>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000208: ECMS: Error message when export User Audit Trial Report</div>
+                <div class="meta-info">
+                    <span class="status not-bug">🟠状态: 未复现（怀疑网络问题）</span><br>
+                    <strong>👤 处理人员:</strong> 后端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    User Audit Trial Report can't be exported and error message appear
+                </div>
+                <div class="steps">
+                    <strong>🔄 复现步骤:</strong><br>
+                    1. System Management > Audit report management > User Audit Trial Report<br>
+                    2. Export<br>
+                    3. Error message appear
+                </div>
+                <div class="screenshot-path">
+                    <strong>📸 截图路径:</strong> "192.168.100.158\TestFolder\Wesoft Bug to Mantis\Peter\0000208"
+                </div>
+            </div>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000209: ECMS: Incorrect report title and No "Device no." data display</div>
+                <div class="meta-info">
+                    <span class="status transfer">🟡 状态: 需要转设备端(标题已改,数据设备端未报)</span><br>
+                    <strong>👤 处理人员:</strong> 后端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    • Batch message report: No "Device no." data display and report title is correct<br>
+                    • Batch scanning summary report: No "Device no." data display and report title is correct
+                </div>
+                <div class="steps">
+                    <strong>🔄 复现步骤:</strong><br>
+                    1. System Management > Audit report management > Batch message report<br>
+                    2. System Management > Audit report management > Batch scanning summary report
+                </div>
+                <div class="screenshot-path">
+                    <strong>📸 截图路径:</strong> "192.168.100.158\TestFolder\Wesoft Bug to Mantis\Peter\0000209"
+                </div>
+            </div>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000210: ECMS: Some data still display as English after language change</div>
+                <div class="meta-info">
+                    <span class="status not-bug">🟠 状态: 不是bug，待退回(设备端已沟通只支持英文)</span><br>
+                    <strong>👤 处理人员:</strong> 后端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    The data of "Module" and Action name" still display as English in User Audit Trial Report after change application language to Traditional Chinese
+                </div>
+                <div class="steps">
+                    <strong>🔄 复现步骤:</strong><br>
+                    1. Change application language to Traditional Chinese<br>
+                    2. System Management > Audit report management > User Audit Trial Report<br>
+                    3. Some data still display in English
+                </div>
+                <div class="screenshot-path">
+                    <strong>📸 截图路径:</strong> "192.168.100.158\TestFolder\Wesoft Bug to Mantis\Peter\0000210"
+                </div>
+            </div>
+        </div>
+
+        <div class="date-section">
+            <h2>📅 6月10日</h2>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000205: ECMS: Batch data can't be shown after switch</div>
+                <div class="meta-info">
+                    <span class="status completed">🟢 状态: 已完成</span><br>
+                    <strong>👤 处理人员:</strong> 前端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    Batch data can't be shown after switch between "All" and "Device number" in "Device no." under "Enquire Batch in VBIS"
+                </div>
+                <div class="screenshot-path">
+                    <strong>📸 截图路径:</strong> "192.168.100.158\TestFolder\Wesoft Bug to Mantis\Peter\0000205"
+                </div>
+            </div>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000203: ECMS - Close Counting - wording issue in Confirm message</div>
+                <div class="meta-info">
+                    <span class="status completed">🟢 状态: 已完成</span><br>
+                    <strong>👤 处理人员:</strong> 前端处理
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    • 错误: ... These devices may not be able to start counting....<br>
+                    • 正确: ... These devices may not be able to Close counting....
+                </div>
+            </div>
+
+            <div class="bug-item">
+                <div class="bug-id">🆔 0000186: ECMS: No data import from HSS0.5 & VBIS when use offline data recovery</div>
+                <div class="meta-info">
+                    <span class="status transfer">🟡 状态: 需要转离线数据导入应用处理</span>
+                </div>
+                <div class="description">
+                    <strong>📝 问题描述:</strong><br>
+                    During import data, it will show 100% imported but there is no data display on related subsector in progress monitoring
+                </div>
+                <div class="screenshot-path">
+                    <strong>📸 截图路径:</strong> "192.168.100.158\TestFolder\Wesoft Bug to Mantis\Peter\0000186"
+                </div>
+            </div>
+
+            <!-- 继续添加其他bug项目... -->
+        </div>
+
+        <div class="last-updated">
+            <p>📅 最后更新时间: <span id="lastUpdated"></span></p>
+            <p>🔗 如有问题请联系开发团队</p>
+        </div>
+    </div>
+
+    <script>
+        // 显示最后更新时间
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleString('zh-CN');
+        
+        // 添加一些交互功能
+        document.querySelectorAll('.bug-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.transform = this.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
+                this.style.transition = 'transform 0.2s ease';
+            });
+        });
+    </script>
+</body>
+</html> 

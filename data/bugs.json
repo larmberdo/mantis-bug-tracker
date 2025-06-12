@@ -1,6 +1,46 @@
 {
   "bugs": [
     {
+      "id": "0000164",
+      "title": "ECMS: Incorrect layout of the list of Candidates for Drawing lots report",
+      "status": "pending",
+      "assignee": "后端处理",
+      "date": "2025-06-12",
+      "description": "抽签报告中的候选人列表布局不正确",
+      "steps": "抽签报告 -> 查看候选人列表",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000164"
+    },
+    {
+      "id": "0000221",
+      "title": "ECMS: 设备管理页面，设备列表中，程式版本字段没有随语言切换",
+      "status": "not-bug",
+      "assignee": "转设备端",
+      "date": "2025-06-12",
+      "description": "设备端报送的字段是不会区分语言的",
+      "steps": "设备管理页面 -> 查看设备列表中的程式版本字段",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000221"
+    },
+    {
+      "id": "0000220",
+      "title": "ECMS: 权限管理页面，菜单权限和按钮权限的文字描述有的是简体中文，且没有随着语言切换",
+      "status": "pending",
+      "assignee": "后端处理",
+      "date": "2025-06-12",
+      "description": "权限管理页面，菜单权限和按钮权限的文字描述有的是简体中文，且没有随着语言切换",
+      "steps": "权限管理页面 -> 查看菜单权限和按钮权限的文字描述",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000220"
+    },
+    {
+      "id": "0000219",
+      "title": "ECMS: Incorrect title shows in \"Offline data recovery\"",
+      "status": "transfer",
+      "assignee": "转离线应用处理",
+      "date": "2025-06-12",
+      "description": "导入离线数据应用表格中的字段等文案不正确",
+      "steps": "导入离线数据应用 -> 查看表格中的字段等文案",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000219"
+    },
+    {
       "id": "0000213",
       "title": "ECMS - Device Control - No \"In Progress\" image for VBIS",
       "status": "completed",

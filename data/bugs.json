@@ -16,7 +16,7 @@
       "status": "not-reproduced",
       "assignee": "前端处理",
       "date": "2025-06-12",
-      "description": "A user assigned to \"Command center user\" should only be able to access \"Equipment Management\", \"Counting progress\" and \"Election result management\" pages. He shouldn't be able to modify the election activities.However, at the first login, ECMS loads http://192.168.0.11/home and display the Election Activity Management page, and it lets user able to click whatever on that page. It shouldn't be allowed.\\n However, at the first login, ECMS loads http://192.168.0.11/home and display the Election Activity Management page, and it lets user able to click whatever on that page. It shouldn't be allowed. \\n Once he navigator to other functional sections (such as Equipment Management), he will not able to access the Election Management page. \\n The same happens to other user roles that shouldn't be able to operate the election activity.",
+      "description": "A user assigned to \"Command center user\" should only be able to access \"Equipment Management\", \"Counting progress\" and \"Election result management\" pages. He shouldn't be able to modify the election activities.\nHowever, at the first login, ECMS loads http://192.168.0.11/home and display the Election Activity Management page, and it lets user able to click whatever on that page. It shouldn't be allowed.It shouldn't be allowed. \n Once he navigator to other functional sections (such as Equipment Management), he will not able to access the Election Management page. \n The same happens to other user roles that shouldn't be able to operate the election activity.",
       "steps": "选择没有活动管理页面权限的角色，绑定用户，登录查看",
       "screenshotPath": "",
       "note": "未复现"

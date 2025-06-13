@@ -1,6 +1,36 @@
 {
   "bugs": [
     {
+      "id": "0000185",
+      "title": "ECMS: Items are not much between screen display and report in VBIS information report",
+      "status": "fixed-pending-verification",
+      "assignee": "前端处理",
+      "date": "2025-06-13",
+      "description": "审计日志报告中行动时间更改成开始时间和结束时间",
+      "steps": "审计日志报告 -> 查看数据表格中的行动时间列",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000185"
+    },
+    {
+      "id": "0000182",
+      "title": "ECMS: Report file name should use Traditional Chinese",
+      "status": "completed",
+      "assignee": "前端处理",
+      "date": "2025-06-12",
+      "description": "进度监控下载CRO报告和指定界别的报告，文件名称是简体中文",
+      "steps": "进度监控 -> 下载CRO报告和指定界别的报告",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000182"
+    },
+    {
+      "id": "0000187",
+      "title": "ECMS: Wrong title of pop-up message in offline data recovery",
+      "status": "transfer",
+      "assignee": "转离线应用处理",
+      "date": "2025-06-12",
+      "description": "离线数据恢复弹窗的标题名称不对",
+      "steps": "进度监控 -> 点击离线数据恢复 -> 查看弹窗的标题名称",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000187"
+    },
+    {
       "id": "0000164",
       "title": "ECMS: Incorrect layout of the list of Candidates for Drawing lots report",
       "status": "pending",
@@ -43,7 +73,7 @@
     {
       "id": "0000213",
       "title": "ECMS - Device Control - No \"In Progress\" image for VBIS",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2025-06-12",
       "description": "设备管理，设备控制弹窗中VBIS图标没有in Progress状态图标",
@@ -53,18 +83,18 @@
     {
       "id": "0000146",
       "title": "Role management issue. User without priviledge can view and operate the Election Activity Management page(没有活动管理页面权限的用户登录后能访问活动管理页面)",
-      "status": "not-reproduced",
+      "status": "fixed-pending-verification",
       "assignee": "前端处理",
       "date": "2025-06-12",
       "description": "A user assigned to \"Command center user\" should only be able to access \"Equipment Management\", \"Counting progress\" and \"Election result management\" pages. He shouldn't be able to modify the election activities.\nHowever, at the first login, ECMS loads http://192.168.0.11/home and display the Election Activity Management page, and it lets user able to click whatever on that page. It shouldn't be allowed.It shouldn't be allowed. \n Once he navigator to other functional sections (such as Equipment Management), he will not able to access the Election Management page. \n The same happens to other user roles that shouldn't be able to operate the election activity.",
       "steps": "选择没有活动管理页面权限的角色，绑定用户，登录查看",
       "screenshotPath": "",
-      "note": "未复现"
+      "note": "bug已修复"
     },
     {
       "id": "0000189",
       "title": "Recount function without RO, and auto authorized successful",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2024-06-11",
       "description": "Device Management -> Click icon (right upper) -> Recount\nlogin user has Device Management with recount access only, without RO access.\nBut the authorized successful automatically, and without insert RO U",
@@ -74,7 +104,7 @@
     {
       "id": "0000188",
       "title": "Wording issue for \"severs\", it should be servers",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2024-06-11",
       "description": "Initialisation popup window:\n• 错误: Please confirm to execute data initialisation for all devices and severs\n• 正确: Please confirm to execute data initialisation for all devices and servers",
@@ -84,7 +114,7 @@
     {
       "id": "0000207",
       "title": "ECMS: Server error when Consolidation",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2024-06-11",
       "description": "Server error when select all subsectors to consolidate.",
@@ -127,7 +157,7 @@
     {
       "id": "0000205",
       "title": "ECMS: Batch data can't be shown after switch",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2024-06-10",
       "description": "Batch data can't be shown after switch between \"All\" and \"Device number\" in \"Device no.\" under \"Enquire Batch in VBIS\"",
@@ -137,7 +167,7 @@
     {
       "id": "0000203",
       "title": "ECMS - Close Counting - wording issue in Confirm message",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2024-06-10",
       "description": "• 错误: ... These devices may not be able to start counting....\n• 正确: ... These devices may not be able to Close counting....",

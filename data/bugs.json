@@ -1,6 +1,16 @@
 {
   "bugs": [
     {
+      "id": "0000224",
+      "title": "Offline data recovery fail but ECMS always show success",
+      "status": "transfer",
+      "assignee": "转离线应用处理",
+      "date": "2025-06-13",
+      "description": "导入离线应用数据失败，但ECMS显示成功(离线应用返回的状态是完成导入，但是数据没有被更新)",
+      "steps": "导入离线应用数据 -> 查看ECMS的进度监控中的数据是否发生变化",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Photos\\20250613\\Offline import false success (recount round mismatch).mp3"
+    },
+    {
       "id": "0000185",
       "title": "ECMS: Items are not much between screen display and report in VBIS information report",
       "status": "fixed-pending-verification",

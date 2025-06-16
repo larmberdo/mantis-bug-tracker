@@ -13,7 +13,7 @@
     {
       "id": "0000185",
       "title": "ECMS: Items are not much between screen display and report in VBIS information report",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2025-06-13",
       "description": "审计日志报告中行动时间更改成开始时间和结束时间",
@@ -93,7 +93,7 @@
     {
       "id": "0000146",
       "title": "Role management issue. User without priviledge can view and operate the Election Activity Management page(没有活动管理页面权限的用户登录后能访问活动管理页面)",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2025-06-12",
       "description": "A user assigned to \"Command center user\" should only be able to access \"Equipment Management\", \"Counting progress\" and \"Election result management\" pages. He shouldn't be able to modify the election activities.\nHowever, at the first login, ECMS loads http://192.168.0.11/home and display the Election Activity Management page, and it lets user able to click whatever on that page. It shouldn't be allowed.It shouldn't be allowed. \n Once he navigator to other functional sections (such as Equipment Management), he will not able to access the Election Management page. \n The same happens to other user roles that shouldn't be able to operate the election activity.",

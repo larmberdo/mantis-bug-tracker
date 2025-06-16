@@ -43,7 +43,7 @@
     {
       "id": "0000164",
       "title": "ECMS: Incorrect layout of the list of Candidates for Drawing lots report",
-      "status": "pending",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2025-06-12",
       "description": "抽签报告中的候选人列表布局不正确",

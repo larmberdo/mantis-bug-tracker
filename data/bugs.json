@@ -21,6 +21,16 @@
       "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000185"
     },
     {
+      "id": "0000184",
+      "title": "ECMS: 设备管理菜单英文名和权限管理中的菜单权限中的设备管理菜单名称不一致",
+      "status": "completed",
+      "assignee": "后端处理",
+      "date": "2025-06-12",
+      "description": "设备管理菜单英文名和权限管理中的菜单权限中的设备管理菜单名称不一致",
+      "steps": "权限管理页面 -> 查看菜单权限中的设备管理菜单名称",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000184"
+    },
+    {
       "id": "0000182",
       "title": "ECMS: Report file name should use Traditional Chinese",
       "status": "completed",

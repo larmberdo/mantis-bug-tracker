@@ -1,6 +1,16 @@
 {
   "bugs": [
     {
+      "id": "0000226",
+      "title": "ECMS Scanning Log Report missing error ID and cannot export",
+      "status": "fixed-pending-verification",
+      "assignee": "前端处理不能导出，设备端处理error ID 没有的bug",
+      "date": "2025-06-16",
+      "description": "扫描日志报告无法导出，且没有错误ID",
+      "steps": "扫描日志报告 -> 点击导出 & 查看数据列表error ID",
+      "screenshotPath": ""
+    },
+    {
       "id": "0000224",
       "title": "Offline data recovery fail but ECMS always show success",
       "status": "transfer",

@@ -1,6 +1,56 @@
 {
   "bugs": [
     {
+      "id": "0000235",
+      "title": "ECMS: 进度监控页面-筛选条件中排序条件选择按设备编号排序，没生效",
+      "status": "fixed-pending-verification",
+      "assignee": "后端处理",
+      "date": "2025-06-18",
+      "description": "排序条件选择按设备编号排序，没生效",
+      "steps": "进度监控页面 -> 筛选条件 -> 排序条件选择按设备编号排序 -> 查看数据列表",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000235"
+    },
+    {
+      "id": "0000239",
+      "title": "ECMS: 审计报告中分批扫描报告和分批扫描全表中导出的报告中，初次轮次，报告中展示了Recount 0",
+      "status": "completed",
+      "assignee": "后端处理",
+      "date": "2025-06-18",
+      "description": "初次轮次，报告中展示了Recount 0已修改，但非初次轮次，报告中是否需要展示Recount x 需要确认",
+      "steps": "下载分批扫描报告和分批扫描全表报告，查看初次轮次，报告中展示了Recount 0",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000239"
+    },
+    {
+      "id": "0000208",
+      "title": "ECMS: 导出审计日志，系统提示超时错误",
+      "status": "pending",
+      "assignee": "前端 && 后端处理",
+      "date": "2025-06-18",
+      "description": "因为日志数据太多，mantis导出时的日志条数为6000+，导致接口超时，通用接口超时时间为20S",
+      "steps": "导出审计日志，等待20S后查看结果",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000208"
+    },
+    {
+      "id": "0000195",
+      "title": "ECMS: 系统管理-审计日志-操作日志中部分内容没有随语言切换",
+      "status": "not-bug",
+      "assignee": "后端处理",
+      "date": "2025-06-18",
+      "description": "已和mantis确认,没有随语言切换的为历史数据，新增的操作日志不会有该问题；历史脏数据后面会被清除",
+      "steps": "系统管理-审计日志-操作日志 -> 切换语言到英语 -> 查看操作日志",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000195"
+    },
+    {
+      "id": "0000243",
+      "title": "ECMS: 权限设置页面，切换语言到英语的时候，设备栏没有显示对应的英文",
+      "status": "fixed-pending-verification",
+      "assignee": "前端处理",
+      "date": "2025-06-18",
+      "description": "权限设置页面，切换语言到英语的时候，设备栏没有显示对应的英文",
+      "steps": "权限设置页面 -> 切换语言到英语 -> 查看设备栏",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000243"
+    },
+    {
       "id": "0000226",
       "title": "ECMS Scanning Log Report missing error ID and cannot export",
       "status": "completed",

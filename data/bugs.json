@@ -33,7 +33,7 @@
     {
       "id": "0000195",
       "title": "ECMS: 系统管理-审计日志-操作日志中部分内容没有随语言切换",
-      "status": "not-bug",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2025-06-18",
       "description": "已和mantis确认,没有随语言切换的为历史数据，新增的操作日志不会有该问题；历史脏数据后面会被清除",
@@ -123,7 +123,7 @@
     {
       "id": "0000221",
       "title": "ECMS: 设备管理页面，设备列表中，程式版本字段没有随语言切换",
-      "status": "not-bug",
+      "status": "completed",
       "assignee": "转设备端",
       "date": "2025-06-12",
       "description": "设备端报送的字段是不会区分语言的",
@@ -204,7 +204,7 @@
     {
       "id": "0000208",
       "title": "ECMS: Error message when export User Audit Trial Report",
-      "status": "not-bug",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2024-06-11",
       "description": "User Audit Trial Report can't be exported and error message appear",
@@ -226,7 +226,7 @@
     {
       "id": "0000210",
       "title": "ECMS: Some data still display as English after language change",
-      "status": "not-bug",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2024-06-11",
       "description": "The data of \"Module\" and Action name\" still display as English in User Audit Trial Report after change application language to Traditional Chinese",

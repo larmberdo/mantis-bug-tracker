@@ -3,7 +3,7 @@
     {
       "id": "0000162",
       "title": "ECMS: 进度监控页面，CRO报告和指定界别点票报告中，重点轮次没有显示Recount",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2025-06-19",
       "description": "进度监控页面，CRO报告和指定界别点票报告中，重点轮次没有显示Recount",
@@ -13,7 +13,7 @@
     {
       "id": "0000245",
       "title": "ECMS: 审计报告中，分批扫描报告中，初始轮次不应该展示Recount 0",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2025-06-19",
       "description": "审计报告中，分批扫描报告，初始轮次不应该展示Recount 0",
@@ -23,7 +23,7 @@
     {
       "id": "0000246",
       "title": "ECMS: 审计报告中，分批扫描全表报告中，初始轮次不应该展示Recount 0",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2025-06-19",
       "description": "审计报告中，分批扫描全表报告中，初始轮次不应该展示Recount 0",
@@ -43,7 +43,7 @@
     {
       "id": "0000235",
       "title": "ECMS: 进度监控页面-筛选条件中排序条件选择按设备编号排序，没生效",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2025-06-18",
       "description": "排序条件选择按设备编号排序，没生效",
@@ -83,7 +83,7 @@
     {
       "id": "0000243",
       "title": "ECMS: 权限设置页面，切换语言到英语的时候，设备栏没有显示对应的英文",
-      "status": "fixed-pending-verification",
+      "status": "completed",
       "assignee": "前端处理",
       "date": "2025-06-18",
       "description": "权限设置页面，切换语言到英语的时候，设备栏没有显示对应的英文",

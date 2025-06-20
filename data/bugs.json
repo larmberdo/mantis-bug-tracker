@@ -1,6 +1,46 @@
 {
   "bugs": [
     {
+      "id": "0000162",
+      "title": "ECMS: 进度监控页面，CRO报告和指定界别点票报告中，重点轮次没有显示Recount",
+      "status": "fixed-pending-verification",
+      "assignee": "后端处理",
+      "date": "2025-06-19",
+      "description": "进度监控页面，CRO报告和指定界别点票报告中，重点轮次没有显示Recount",
+      "steps": "进度监控页面，CRO报告和指定界别点票报告中，重点轮次没有显示Recount",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000162"
+    },
+    {
+      "id": "0000245",
+      "title": "ECMS: 审计报告中，分批扫描报告中，初始轮次不应该展示Recount 0",
+      "status": "fixed-pending-verification",
+      "assignee": "后端处理",
+      "date": "2025-06-19",
+      "description": "审计报告中，分批扫描报告，初始轮次不应该展示Recount 0",
+      "steps": "审计报告中，分批扫描报告，初始轮次不应该展示Recount 0",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000245"
+    },
+    {
+      "id": "0000246",
+      "title": "ECMS: 审计报告中，分批扫描全表报告中，初始轮次不应该展示Recount 0",
+      "status": "fixed-pending-verification",
+      "assignee": "后端处理",
+      "date": "2025-06-19",
+      "description": "审计报告中，分批扫描全表报告中，初始轮次不应该展示Recount 0",
+      "steps": "审计报告中，分批扫描全表报告中，初始轮次不应该展示Recount 0",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000246"
+    },
+    {
+      "id": "0000247",
+      "title": "ECMS: 审计日志-操作日志中，操作详情里删除和禁用用户需要显示用户名",
+      "status": "pending",
+      "assignee": "后端处理",
+      "date": "2025-06-20",
+      "description": "审计日志-操作日志中，操作详情里删除和禁用用户需要显示用户名",
+      "steps": "审计日志-操作日志中，操作详情里删除和禁用用户需要显示用户名",
+      "screenshotPath": ""
+    },
+    {
       "id": "0000235",
       "title": "ECMS: 进度监控页面-筛选条件中排序条件选择按设备编号排序，没生效",
       "status": "fixed-pending-verification",

@@ -1,6 +1,36 @@
 {
   "bugs": [
     {
+      "id": "0000183",
+      "title": "ECMS: 扫描日志报表中，数据没有显示完整，部分字段无空",
+      "status": "completed",
+      "assignee": "后端处理",
+      "date": "2025-06-23",
+      "description": "扫描日志报表中，数据没有显示完整，部分字段无空",
+      "steps": "扫描日志报表中，数据没有显示完整，部分字段无空",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000183"
+    },
+    {
+      "id": "0000248",
+      "title": "ECMS: 登录界面应该先展示ukey",
+      "status": "completed",
+      "assignee": "前端处理",
+      "date": "2025-06-23",
+      "description": "登录界面应该先展示ukey",
+      "steps": "登录界面应该先展示ukey",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000248"
+    },
+    {
+      "id": "0000208",
+      "title": "ECMS: 审计报告，用户追踪报告打印失败",
+      "status": "completed",
+      "assignee": "后端处理",
+      "date": "2025-06-23",
+      "description": "审计报告，用户追踪报告打印失败",
+      "steps": "审计报告，用户追踪报告打印失败",
+      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000208"
+    },
+    {
       "id": "0000162",
       "title": "ECMS: 进度监控页面，CRO报告和指定界别点票报告中，重点轮次没有显示Recount",
       "status": "completed",
@@ -33,7 +63,7 @@
     {
       "id": "0000247",
       "title": "ECMS: 审计日志-操作日志中，操作详情里删除和禁用用户需要显示用户名",
-      "status": "pending",
+      "status": "completed",
       "assignee": "后端处理",
       "date": "2025-06-20",
       "description": "审计日志-操作日志中，操作详情里删除和禁用用户需要显示用户名",
@@ -143,7 +173,7 @@
     {
       "id": "0000187",
       "title": "ECMS: Wrong title of pop-up message in offline data recovery",
-      "status": "transfer",
+      "status": "completed",
       "assignee": "转离线应用处理",
       "date": "2025-06-12",
       "description": "离线数据恢复弹窗的标题名称不对",

@@ -21,16 +21,6 @@
       "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000248"
     },
     {
-      "id": "0000208",
-      "title": "ECMS: 审计报告，用户追踪报告打印失败",
-      "status": "completed",
-      "assignee": "后端处理",
-      "date": "2025-06-23",
-      "description": "审计报告，用户追踪报告打印失败",
-      "steps": "审计报告，用户追踪报告打印失败",
-      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000208"
-    },
-    {
       "id": "0000162",
       "title": "ECMS: 进度监控页面，CRO报告和指定界别点票报告中，重点轮次没有显示Recount",
       "status": "completed",
@@ -89,16 +79,6 @@
       "description": "初次轮次，报告中展示了Recount 0已修改，但非初次轮次，报告中是否需要展示Recount x 需要确认",
       "steps": "下载分批扫描报告和分批扫描全表报告，查看初次轮次，报告中展示了Recount 0",
       "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000239"
-    },
-    {
-      "id": "0000208",
-      "title": "ECMS: 导出审计日志，系统提示超时错误",
-      "status": "pending",
-      "assignee": "前端 && 后端处理",
-      "date": "2025-06-18",
-      "description": "因为日志数据太多，mantis导出时的日志条数为6000+，导致接口超时，通用接口超时时间为20S",
-      "steps": "导出审计日志，等待20S后查看结果",
-      "screenshotPath": "192.168.100.158\\TestFolder\\Wesoft Bug to Mantis\\Peter\\0000208"
     },
     {
       "id": "0000195",
